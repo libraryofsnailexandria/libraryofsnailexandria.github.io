@@ -19,7 +19,7 @@ pre{
 
 .container {
     display: flex;
-    background-color: rgb(49, 49, 49); 
+    background: linear-gradient(90deg, rgb(49, 42, 51), rgb(49, 49, 49));
     height: 100vh;
     align-items: stretch;
 }
@@ -31,7 +31,7 @@ pre{
 
 .column:first-child {
     flex-basis: 20%;
-    background-color: rgb(37, 37, 37);
+    background: linear-gradient(90deg, rgb(19, 12, 22), rgb(24, 24, 24));
 }
 
 .column:last-child {
