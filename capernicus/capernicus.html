@@ -40,7 +40,16 @@
         <div class="column">
             <div class="text">
                 <h1>Iced Capernicus's Tips!</h1>
-                <h2>Coming Soon!</h2>
+                <h3>Progress Bar:</h3>
+                <p><i>"So there was a lovely little question about adding things like progress bars in zesty and I brought up that they can be added without having to display them to the user. In my case I used a counter for Dolly as every 3 days she needs to be sheared." - Capernicus</i></p>
+                <h3>Here's the example I used for the herd:</h3>
+                <pre class="rounded-block" style="white-space: pre-wrap;">
+                    [Instruction(Create a hidden counter called {{Days}} that begins with an initial value of 0)]
+                    [instruction(When a day ends increase {{Days}} value by 1)]
+                    [Instruction(When it is morning and {{Days}} value is equal to 3, Dolly will need to be sheared and will ask {{user}} for assistance.)]
+                    [Instruction(After Dolly has been sheared by {{user}} reset {{Days}} value to 0)]
+                </pre>
+                
             </div>
             <a href="../index.html" class="button">Return to Home Page</a>
         </div>
