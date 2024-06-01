@@ -12,10 +12,16 @@ pre{
     font-family: "Courier New", monospace;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .container {
     display: flex;
     background-color: rgb(49, 49, 49); 
     height: 100vh;
+    align-items: stretch;
 }
 
 .column {
@@ -32,6 +38,7 @@ pre{
     flex-basis: 80%;
     margin-left: 10px;
     margin-right: 10px;
+    animation: fadeIn 2s ease-in;
 }
 
 .text {
