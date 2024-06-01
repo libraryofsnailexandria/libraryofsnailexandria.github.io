@@ -20,6 +20,9 @@ body{
 
 .column:last-child {
     flex-basis: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
 }
 
 .text {
