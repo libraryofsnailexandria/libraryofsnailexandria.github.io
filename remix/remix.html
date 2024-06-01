@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>My Website</title>
-    <link rel="stylesheet" type="text/css" href="remix/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -13,74 +13,9 @@
         </div>
         <div class="column">
             <div class="text">
-                <h1>Welcome to the Library</h1>
-                <hr>
-                <p>In here you will find a curated selection of tips, tricks and example codes from some of the best creators on GGPT</p>
-                <br>
-                <p>How to use the website:</p>
-                <p>On the left side you will find the list of creators that have submitted their code for the public to see and be inspired by. Click your choice and it will take you to everything they have provided for you including some short explanations.</p>
-                <br>
-                <p>But before that I recommend continuing down to get a short explanation on each of the 3 Common ways of building </p>
-                <br>
-                <h2>Basics of Bot building:</h2>
-                <hr>
-                <h3>Plain text:</h3>
-                <br>
-                <p>It's exactly what you think, you write your Scenario, Personality and everything else with plain text without using any sophisticated syntax. This style works great for open ended scenarios where stories and descriptions are most important as it conveys a lot of the detail that the other choices of bot building don't</p>
-                <hr>
-                <h3>W++:</h3>
-                <br>
-                <p>W++ is a JSON-like syntax that segregates the information into clearly defined tags, such as character name, height, appearance, personality, etc. Its information dense form allows it to convey a lot of key points to the LLM while sacrificing fidelity.</p>
-                <hr>
-                <h3>JSON:</h3>
-                <br>
-                <p>JSON is exactly what it sounds like. It's literally JSON, it has a more complex syntax than W++ and is generally a good way to convey a lot of dense information while sacrificing some of the fidelity.</p>
-                <h1>Some things to note about LLM's:</h1>
-                <br>
-                <p>LLM's or Large Language Models, are extremely sophisticated libraries that don't give you the whole book, but rather print out a gross approximation of the text you're searching for.</p>
-                <br>
-                <p>Generative Speech or Generative Typing is thrown around a lot, but what it really means is that it's a very sophisticated google search of all the text the bot was ever provided, scanned many millions of times and then uses that text as a basis of it's communication… So, if you feed the LLM only religious text or only Scientific papers, you will get responses generated in the way those examples are formulated. </p>
-                <br>
-                <p>As such, whatever the original LLM was fed, will always linger in the background, ready to be used to fill gaps.</p>
-                <br>
-                <h2>Tokenization:</h2>
-                <br>
-                <p>I'm going to start with Tokenization, we all know about it and we all struggle to fit inside this limit: 2500K Tokens. What does that mean? Well, without going into technicalities of how input is broken down into tokens and all that jam as that's entirely dependent on the algorithm doing the Tokenization… Your words, each sentence, dot, space and everything you put as text to the LLM gets broken into as small a part as possible. </p>
-                <br>
-                <p>Example: This is a test token message = ["This", "is", "a", "test", "token", "message"] (Each word is taken separately into what's called a "List" or "Dictionary" depending on what programming language you work with.)</p>
-                <br>
-                <p>That list is then fed into a Natural Language Processing algorithm or NLP for short (I'll use that from now on). The NLP extracts the context from the tokenized sentence by relating each word in order and out of order to each other. That context is then sent along with the tokenized input to the LLM, who then poops out a response based on any settings that the LLM's owner has defined.</p>
-                <br>
-                <h2>Prompt Engineering & Rule Based Systems:</h2>
-                <br>
-                <p>This is what we do. To be more precise, we manipulate the already existing prompts by inserting more context into them or filling in blank variables that are left free for our use.</p>
-                <br>
-                <p>Prompt Engineering: The best idea for that I can think of for our specific use case is the "First Message" section and "Example Conversation"</p>
-                <br>
-                <p>This is effectively, where you give the bot an example of how it should respond, the speech pattern and everything else in regards to how we want to make the bot sound based on input prompts.</p>
-                <br>
-                <p>Rule Based System: Everything else (Except for the description) falls under this from what I understand. Rule based systems, unlike Prompt Engineering are hard set rules and behaviors that are expected of the LLM. Simply speaking:</p>
-                <br>
-                <p>If in your personality part you put in: "Personality: Cheerful, Bubbly, Soft Spoken" The bot will take that personality, tokenize it and set them in the following format</p>
-                <br>
-                <p>
-                    {
-                    "Rules":{
-                        "Personality": ["Cheerful", "Bubbly", "Soft Spoken"]
-                        }
-                    }
-                </p>
-                <br>
-                <p>The bot is not "selective" in what it picks and chooses for it's rules and prompts. It takes in the WHOLE of your input, tokenizes it, organizes it into rules and engineered contextual prompts and then sets a hierarchy based on what's "at the top" first. Without knowing exactly HOW the LLM we have on GGPT is configured I can't say for sure, but from what I can see, if you use plain text + bullet points, it takes the First line as the "rule" object and names it (as in the above example) "Personality" then assigns a Key to it, in that example it's in the form of a Dictionary. And it does that for every line, building up a JSON-like structure, a tree of rules so to speak.</p>
-                <br>
-                <p>The hierarchy is simple. Imagine a tree flowchart, the LLM goes through the objects on the tree and then stops, when it finds the first object that fits to its response that it's trying to generate.</p>
-                <br>
-                <p>As such, organizing your prompts and rules from most important to least important matters the most.</p>
-                <h2>Why it doesn't matter how you formulate your Prompts and Rules</h2>
-                <br>
-                <p>I know, I know! W++ and JSON and all the other systems people are using have their merits and downfalls. But here's why it doesn't actually matter. Especially for JSON formats.</p>
-                <br>
-                <p>Here's the deal, the input you put into the areas on the websites… They take plain text, or "raw strings", under that assumption, putting in a JSON file in there does nothing as it will only be read as plain text. And while the hierarchy will be most likely remembered after tokenization, all the special signs, brackets and stuff are then fed into the actual JSON-like config that the bot uses. Similar case with W++, you basically loose a lot of tokens on all the json/w++ bracketing and organization.</p>
+                <div>
+                    {% include remix/jsonlike.html %}
+                </div>
             </div>
         </div>
     </div></body>
