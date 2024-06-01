@@ -2,6 +2,11 @@ body{
     background-color: rgb(49, 49, 49);
 }
 
+a{
+    color: white;
+    text-decoration: underline;
+}
+
 .container {
     display: flex;
     background-color: rgb(49, 49, 49); 

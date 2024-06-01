@@ -1,6 +1,10 @@
 body{
     background-color: rgb(49, 49, 49);
 }
+a{
+    color: white;
+    text-decoration: none;
+}
 
 .container {
     display: flex;
@@ -28,4 +32,17 @@ body{
 .text {
     color: white;
     font-family: "Courier New", monospace;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #585858;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
 }
