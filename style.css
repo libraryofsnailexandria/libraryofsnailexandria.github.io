@@ -23,6 +23,10 @@ body{
     font-family: 'Cinzel', serif;
     animation: bounce 1s ease-in-out both;
 }
+.page-wide-section a{
+    color: white;
+    text-decoration: none;
+}
 
 .container{
     display: flex;
