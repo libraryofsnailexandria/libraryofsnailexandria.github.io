@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Capernicus's Tips</title>
+        <link rel="stylesheet" type="text/css" href="../style/style.css?v=5">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="text">
+                <a href="../index.html">
+                    <h2><u>Home Page</u></h2>
+                </a>
+                <h1>Creators</h1>
+                <br>
+                <a href="../stoner/stoner.html">- FatStoner</a>
+                <br>
+                <a href="../capernicus/capernicus.html">- Iced Capernicus</a>
+                <br>
+                <a href="../cloaked/cloaked.html">- CloakedKitten</a>
+                <br>
+                <a href="../justjam/jam.html">- JustJam</a>
+                <br>
+                <a href="../leaf/leaf.html">- Leaf-on-the-wind</a>
+                <br>
+                <a href="../remix/remix.html">- RemixChanRT</a>
+                <hr>
+                <h2>Other Links</h2>
+                <br>
+                <a href="../otherlinks/llms.html">- How to LLM</a>
+                <br>
+                <a href="../otherlinks/traitlist.html">- Trait List</a>
+                <p>Pro tip:</p>
+                <p>If you get a 404 when going through the different pages, please re-cache the website with shift+F5 (or whatever the shortcut is for your browser)</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="text">
+                <h1>Iced Capernicus's Tips!</h1>
+                <h3>Progress Bar:</h3>
+                <p><i>"So there was a lovely little question about adding things like progress bars in zesty and I brought up that they can be added without having to display them to the user. In my case I used a counter for Dolly as every 3 days she needs to be sheared." - Capernicus</i></p>
+                <h3>Here's the example I used for the herd:</h3>
+                <pre class="rounded-block" style="white-space: pre-wrap;">
+                    [Instruction(Create a hidden counter called {{Days}} that begins with an initial value of 0)]
+                    [instruction(When a day ends increase {{Days}} value by 1)]
+                    [Instruction(When it is morning and {{Days}} value is equal to 3, Dolly will need to be sheared and will ask {{user}} for assistance.)]
+                    [Instruction(After Dolly has been sheared by {{user}} reset {{Days}} value to 0)]
+                </pre>
+                
+            </div>
+            <a href="../index.html" class="button">Return to Home Page</a>
+        </div>
+    </div></body>
+</html>
