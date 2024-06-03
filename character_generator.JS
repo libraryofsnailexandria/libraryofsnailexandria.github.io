@@ -7,18 +7,28 @@ document.addEventListener('DOMContentLoaded', () => {
         // Prevent the form from submitting the traditional way
         event.preventDefault();
 
-        // Create a character object to store the form data
+        function escapeHtml(unsafe) {
+            return unsafe
+                 .replace(/&/g, "&amp;")
+                 .replace(/</g, "&lt;")
+                 .replace(/>/g, "&gt;")
+                 .replace(/"/g, "&quot;")
+                 .replace(/'/g, "&#039;");
+         }
+        
+        // ...
+        
         const character = {
-            name: form.name.value,
-            age: form.age.value,
-            gender: form.gender.value,
-            physicalAppearance: form.appearance.value,
-            eyes: form.eyes.value,
-            hair: form.hair.value,
-            attire: form.attire.value,
-            personality: form.personality.value,
-            mind: form.mind.value,
-            backstory: form.backstory.value,
+            name: escapeHtml(form.name.value),
+            age: escapeHtml(form.age.value),
+            gender: escapeHtml(form.gender.value),
+            physicalAppearance: escapeHtml(form.appearance.value),
+            eyes: escapeHtml(form.eyes.value),
+            hair: escapeHtml(form.hair.value),
+            attire: escapeHtml(form.attire.value),
+            personality: escapeHtml(form.personality.value),
+            mind: escapeHtml(form.mind.value),
+            backstory: escapeHtml(form.backstory.value),
         };
 
         // Display the character information on the web page
