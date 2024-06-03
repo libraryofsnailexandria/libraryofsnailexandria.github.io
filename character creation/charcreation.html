@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library of Snailexandria</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="page-wide-section">
+            <h1>Character Creation</h1>
+            <p>Fill in your things and it'll poop out a nice copy paste you take and plug into your bot</p>
+        </div>
+        <div class="rounded-block">
+            <h2>Read Me first:</h2>
+            <p>This utility does not guarantee that your bot will work like you want it to. It's only here to let you get started easy. You still have to build your Description, First Message, Scenario and Example Conversation</p>
+            <br>
+            <p>Disclaimer: By using this utility you agree that you won't make shit, low effort bots to get clicks and actually try to make something nice <3!</p>
+            <a href="../index.html" class="button">Return to Home Page</a>
+        </div>
+        <div class="char-container">
+            <form id="characterForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+        
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required><br><br>
+        
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender" required><br><br>
+        
+                <label for="appearance">Physical Appearance:</label>
+                <input type="text" id="appearance" name="appearance" required><br><br>
+
+                <label for="eyes">Eyes:</label>
+                <input type="text" id="eyes" name="eyes" required><br><br>
+
+                <label for="hair">Hair:</label>
+                <input type="text" id="hair" name="hair" required><br><br>
+        
+                <label for="attire">Attire:</label>
+                <input type="text" id="attire" name="attire" required><br><br>
+        
+                <label for="personality">Personality:</label>
+                <input type="text" id="personality" name="personality" required><br><br>
+        
+                <label for="mind">Mind:</label>
+                <input type="text" id="mind" name="mind" required><br><br>
+        
+                <label for="backstory">Backstory:</label>
+                <input type="text" id="backstory" name="backstory" required><br><br>
+        
+                <button type="submit">Submit</button>
+            </form>
+            <div id="output" class="rounded-block"></div>
+        </div>
+    </div>
+    <script src="../character_generator.JS"></script>
+</body>
+</html>
