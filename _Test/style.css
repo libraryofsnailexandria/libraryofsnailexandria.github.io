@@ -3,8 +3,43 @@
 p {
     font-family: Courier, monospace;
 }
+
 body{
+    background-color: rgb(0, 0, 0);
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.blur-image {
+    filter: blur(10px);
+}
+
+.background{
     background: linear-gradient(rgb(49, 12, 83), rgb(130, 68, 143));
+    min-height: 100vh;
+}
+.background > :first-child {
+    margin-top: 0;
+}
+.background > :last-child {
+    margin-bottom: 0;
+}
+.char-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: Courier, monospace;
+    height: 100%;
+    width: 90%;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    animation: bounce 1s ease-in-out both;
+    animation-delay: 50ms;
 }
 
 .page-wide-section{
@@ -22,6 +57,10 @@ body{
     color: white;
     font-family: 'Cinzel', serif;
     animation: bounce 1s ease-in-out both;
+}
+.page-wide-section a{
+    color: white;
+    text-decoration: none;
 }
 
 .container{
@@ -70,7 +109,9 @@ body{
     visibility: hidden;
     transform: scale(var(--scale));
 }
-
+.box h1, .box h2, .box h3, .box h4, .box h5, .box h6, .box p {
+    margin: 5px;
+}
 .box:hover {
     --scale: 1.05;
 }
@@ -131,7 +172,10 @@ body{
     animation-delay: 1s;
 }
 .box:nth-child(7) {
-    animation-delay: 1s;
+    animation-delay: 1.2s;
+}
+.box:nth-child(8) {
+    animation-delay: 1.4s;
 }
 
 .rounded-block {
@@ -145,6 +189,10 @@ body{
     overflow-x: auto; 
     animation: bounce 1s ease-in-out both;
     animation-delay: 100ms;
+}
+.rounded-block a{
+    color: white;
+    text-decoration: none;
 }
 
 .button {
@@ -165,3 +213,4 @@ body{
 .button:hover{
     --scale: 1.05;
 }
+
