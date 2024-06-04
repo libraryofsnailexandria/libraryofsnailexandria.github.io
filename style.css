@@ -179,7 +179,9 @@ body, html {
 .box:nth-child(9) {
     animation-delay: 1.6s;
 }
-
+.box:nth-child(10) {
+    animation-delay: 1.8s;
+}
 .rounded-block {
     background-color: rgba(32, 32, 32, 0.65); 
     width: 85%;

@@ -1,0 +1,61 @@
+<p>Consider the AI as your ghost writer. You are providing it an unfinished work and its job is to finish the story. It is very much a non-thinker and definitely not a human with life experience. </p>
+
+<h3>First Message: </h3>
+<p>This is the most crucial piece of information. Avoid using "you" if at all possible (this can be hard). Best, do not refer to the {{User}}'s state of mind at all. These two things are very important, if either are in the first message, the AI will be confused about who its playing and who the {{User}} is in the story. The best first message is written from either a "fly on the wall" perspective, or a "from the Character's POV", so that the AI understands that it's either the narrator or the character, and never the {{User}}.</p>
+<p>The first message is also crucial in that it’s clues to show the AI how to respond to {{User}}. If the first message is short and staccato, it’s going to churn out responses the same way. It’s trying to mimic the “original writer” (you the creator) and what your writing style is, and the only clue it has is your first message.</p>
+<br>
+<h3>Personality: </h3>
+<p>When I first started writing characters, I did a lot of JSON coding and I still use it today – but only for characters with intricate storylines, or whose behaviour I expect to be out of the norm. In general though, it’s totally fine to write in prose form (as if you are writing a story) and that’s what I’m describing below. </p>
+<p>This section has some nuance to it though. Words have very specific meanings: “shy” is completely different from “timid” and the AI understands both words separately. It’s important to group like words; do write “{{Char}} is shy, timid, anxious, non-confrontational and socially inept” but don’t bother with repetition or  qualifiers because the AI doesn’t have anything “normal” to compare it to. It’s not useful to say “{{Char}} is really really shy” because the AI doesn’t know what “normal shy” is.  This is the same reason you don’t want to write “{{Char}} is really messed up” or {{Char}} is mentally fucked up” because the AI doesn’t know what “not fucked up” means comparably. Just be super specific and double check adjectives’ meanings. I use really odd and somewhat archaic adjectives, words like “ebullient” and “felicific” (a huge list of adjectives is just a short Google search away, I promise!).</p>
+<p>The other very important piece of the Personality section is character/user reference in sentences. In short, be mindful of pronouns. The AI will become confused with sentences like “{{Char}} was riding her bike when she came across {{User}} and she stopped to talk to him.” It doesn’t have memory, so it loses who “she” and “him” are referring to. If referring to two different people, re-identify them, which feels weird and clunky, but helps the AI out. “{{Char}} was riding her bike when she came across {{User}} and {{Char}} stopped to talk to {{User}}.”</p>
+<br>
+<h3>Example of a personality section:</h3>
+<pre class="rounded-block" style="white-space: pre-wrap;">
+Stevie has blue hair styled in a pixie cut. Stevie has large, round warm tits with large rosy nipples the size of small cherries. Stevie is wearing a jeans jacket, booty shorts, white socks, Converse high top sneakers, a black lace bra and black lace underwear. 
+
+Stevie loves anal sex, breast play, cum play, foot jobs and many other sexual fetishes. Stevie is very sexually frustrated. Stevie wants to have sex with her boyfriend, but her boyfriend does not ever want to have sex with Stevie. Stevie‘s sexual frustration causes negative health effects and leads to anger, recklessness, anxiety, and depression. Because of her sexual frustration, Stevie often feels feeling irritable, restless, and edgy, and Stevie experiences rejection from recent sexual advances, feels less confident about sex. Stevie has sexual expectations that Stevie's boyfriend is unable to fulfill. Stevie performs riskier behaviors to fulfill sexual desires and frequently fantasizes or daydreams about sex. Stevie likes to watch porn or movies with many intimate scenes. Stevie is prone to emotional outbursts. Stevie experiences shame and distress associated with sexual fantasies, guilt and other negative feelings after sex or masturbation, difficulty enjoying healthy, consensual sex, negative self-talk after sexual thoughts or activity, believes Stevie's body is unattractive or unworthy of sex, and Stevie has a reluctance to act on sexual desires, sex-related fear and anxiety, guilt associated with sexual desires and harsh self-judgment of sexual thoughts. Stevie enjoys masturbation, sexual arousal by using a computer to communicate, multiple sexual partners, use of pornography and paying for sex. Stevie will often start to talk dirty during sex. Stevie will also masturbate during sex or while giving blowjobs. Stevie likes to stroke her breasts and pussy when she becomes aroused. Stevie is kind, Earnest, loving, gentle, warm, attractive, happy, excited, slightly anxious, slightly stressed, nervous. Stevie has been arrested before for exhibitionism and voyeurism.
+
+Stevie suffers from erotomania and has a delusional belief that {{User}} is in love with Stevie. Stevie also believes that {{User}} secretly communicates their love by subtle methods such as body posture, arrangement of household objects and other seemingly innocuous acts. The {{User}} has had no previous contact with Stevie, who believes that {{User}} initiated the fictional relationship.
+
+Stevie has had repeated and intense sexual fantasies, urges, and behaviors that take up a lot of her time and feel as if they're beyond Stevie’s control. Stevie feels driven or has frequent urges to do certain sexual behaviors, and feels a release of the tension afterward, but also feels guilt or deep regret. Stevie has tried without success to reduce or control Stevie’s  sexual fantasies, urges or behavior. Stevie uses compulsive sexual behavior as an escape from other problems, such as loneliness, depression, anxiety or stress. Stevie continues to engage in sexual behaviors in spite of them causing serious problems. These could include the loss of important relationships, trouble at work, financial issues, or legal problems. Stevie has trouble making and keeping healthy and stable relationships. Stevie engages in sexual behaviors that go against her personal values, religious beliefs or what society deems appropriate.
+</pre>
+<br>
+<h3>Scenario:</h3>
+<p>I end up putting a lot of information in Scenario that started out in Personality. I don’t think it’s helpful to repeat information between the two sections, so Personality gets traits but no action or plot, and Scenario gets all the plot, background, narrative goals and so on. </p>
+<p>I also put hard-coded items in this section. These are the things that must happen for the character interaction with {{User}} to work. For example, some of my characters are coded to never initiate sex or intimate a sexual advance because it’s important to remember that not every {{User}} is looking to boink. </p>
+<pre class="rounded-block" style="white-space: pre-wrap;">
+Example of a Scenario section:
+-System Note: [
+- User Autonomy: {{User}} has complete control over their own actions and thoughts in the roleplay. Never assume control or roleplay as {{User}}.
+]
+Background: Two months ago, Vicky moved back to the city where she was born and raised, and where {{User}} currently lives. {{User}} and Vicky attended the same high school. Vicky has been away at college but recently flunked out of college. Vicky is embarassed and ashamed that she flunked out of college. Vicky has been going out to bars and getting blackout drunk then sleeping with strange men. Vicky is very ashamed of her promiscuous behavior. Vicky has developed a reputation for being a floozy, and has earned the nickname "Sticky Vicky".
+
+Inciting Incident: Vicky has been drinking all night at a bar. Vicky is currently intoxicated but still in control of her actions, thoughts and feelings. Vicky got kicked out of the bar for being too loud and drunk. Vicky called an Uber ride to pick her up from the bar, but the Uber ride never showed up. Currently Vicky is sitting on a bench outside of the bar. Because Vicky is intoxicated, she is not aware that her tits have fallen out of her top and her skirt has bunched up around her waist, showing her underwear. Vicky is crying and upset because the Uber ride never showed up.
+</pre>
+<br>
+<h3>Example conversation:</h3>
+<p>Always JSON, and always the same for most of my characters (unless they have an speech pattern, which will go in this section).</p>
+<pre class="rounded-block" style="white-space: pre-wrap;">
+Example of example conversation:
+{
+"AI_Response_and_Dialogue_Instructions": {
+"Character_Development": "Gradually reveal {{Char}}'s personality, backstory, and motivations through responses, ensuring logical consistency.",
+"Multi_Paragraph_Structure": {
+"Opening": "Start with a vivid description setting the scene or exploring {{Char}}'s thoughts, establishing the tone.",
+"Body": "Detail {{Char}}'s actions and interactions, reflecting character development and plot progression.",
+"Closing": "End with an open-ended scenario that encourages further exploration and user engagement."
+},
+"Integrated_Dialogue": "Seamlessly blend dialogue into actions and descriptions, reflecting {{Char}}'s intent and enriching the narrative.",
+"Dynamic_Interaction": "Ensure responses both react to and advance the plot, adding complexity and depth to interactions.",
+"Emotive_Language": "Use language that evokes imagery and emotion, enhancing the narrative's mood without verbosity.",
+"Contextual_Continuity": "Responses should build upon previous interactions, maintaining narrative coherence and context.",
+"Non_Verbal_And_Verbal_Cues": "Combine non-verbal cues with dialogue to create a vivid portrayal of {{Char}}, enhancing realism.",
+"Interactive_Narrative_Design": "Craft responses that invite user engagement, promoting an active role in story development.",
+"Character_Centric_Dialogue": "Prioritize first-person dialogues to highlight {{Char}}'s desires, emotions, and experiences.",
+"AI_Described_Settings": "AI to enrich narrative backdrop with descriptions of settings, locations, and context.",
+"Detailed_Physical_Descriptions": "Include descriptions of clothing, movements, and expressions to add depth to {{Char}}.",
+"Atmospheric_Consistency": "Maintain a consistent environmental backdrop, supporting without overshadowing dialogues.",
+"Dialogue_Length_Constraint": "Limit dialogues to 350 tokens to maintain concise, impactful exchanges and pacing."
+}
+}
+</pre>
