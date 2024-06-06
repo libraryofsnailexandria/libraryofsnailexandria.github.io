@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    background: linear-gradient(rgb(49, 12, 83), rgb(130, 68, 143));
+    min-height: 100vh;
+}
+
+.background > :first-child {
+    margin-top: 0;
+}
+.background > :last-child {
+    margin-bottom: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #616161;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.page-wide-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 85%;
+    height: 200px;
+    margin: 25px auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(32, 32, 32, 0.65);
+    color: white;
+    font-family: 'Cinzel', serif;
+    animation: bounce 1s ease-in-out both;
+}
+
+.rounded-block {
+    background-color: rgba(32, 32, 32, 0.65); 
+    width: 85%;
+    margin: 25px auto;
+    border-radius: 10px; 
+    padding: 20px; 
+    color: #fff;
+    font-family: Courier, monospace; 
+    overflow-x: auto; 
+    animation: bounce 1s ease-in-out both;
+    animation-delay: 100ms;
+}
+.rounded-block a{
+    color: white;
+    text-decoration: none;
+}
+
+.char-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: Courier, monospace;
+    height: 100%;
+    width: 90%;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    animation: bounce 1s ease-in-out both;
+    animation-delay: 50ms;
+}
+:root {
+    --scale: 1;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #03030373;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+    transform: scale(var(--scale));
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(150px) scale(var(--scale));
+        opacity: 0;
+        visibility: visible;
+    }
+    60% {
+        transform: translateY(-20px) scale(var(--scale));
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(10px) scale(var(--scale));
+    }
+    100% {
+        transform: translateY(0) scale(var(--scale));
+        visibility: visible;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    25% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    75% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.background{
+    display: none;
+    background: linear-gradient(rgb(49, 12, 83), rgb(130, 68, 143));
+    min-height: 100vh;
+}
+#popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    height: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.315);
+    color: white;
+    font-family: 'Cinzel', serif;
+    animation: pop 3s ease-in-out both;
+    animation-delay: 0.5s;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.animation-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(49, 12, 83), rgb(130, 68, 143));
+    animation-name: fadeIn;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.animation-background.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}

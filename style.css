@@ -17,15 +17,31 @@ body, html {
 }
 
 .background{
+    display: none;
     background: linear-gradient(rgb(49, 12, 83), rgb(130, 68, 143));
     min-height: 100vh;
 }
+.home-background{
+    background: linear-gradient(rgb(49, 12, 83), rgb(130, 68, 143));
+    min-height: 100vh;
+}
+
+.home-background > :first-child {
+    margin-top: 0;
+}
+
+.home-background > :last-child {
+    margin-bottom: 0;
+}
+
 .background > :first-child {
     margin-top: 0;
 }
+
 .background > :last-child {
     margin-bottom: 0;
 }
+
 .char-container{
     display: flex;
     flex-wrap: wrap;
@@ -216,4 +232,108 @@ body, html {
 
 .button:hover{
     --scale: 1.05;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    25% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    75% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+#popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    height: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.13);
+    color: white;
+    font-family: 'Cinzel', serif;
+    animation: pop 2.3s ease-in-out both;
+    animation-delay: 0.5s;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.animation-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(49, 12, 83), rgb(130, 68, 143));
+    animation-name: fadeIn;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.animation-background.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#home-animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(49, 12, 83), rgb(130, 68, 143));
+    animation-name: fadeIn;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+#home-popup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    height: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.13);
+    color: white;
+    font-family: 'Cinzel', serif;
+    animation: pop 5s ease-in-out both;
+    animation-delay: 0.5s;
 }

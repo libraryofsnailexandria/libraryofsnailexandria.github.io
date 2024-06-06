@@ -2,12 +2,21 @@
 <html>
 <head>
     <title>Library of Snailexandria</title>
-        <link rel="stylesheet" type="text/css" href="../style.css?v=9">
+        <link rel="stylesheet" type="text/css" href="../style.css?v=10">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 </head>
 <body>
+    <div class="animation-background">
+        <div id="popup">
+            <div>
+                <h3>You're now reading: </h3>
+                <h1>Leaf-on-the-wind's Guide</h1>
+                <p>Enjoy the read!</p>
+            </div>
+        </div>
+    </div>
     <div class="background">
 <div class="page-wide-section">
 <h1>Leaf-on-the-wind</h1>
@@ -41,7 +50,7 @@
     </a>
 </div>
 <div class="tip-container">
-<a href="../index.html" class="button">Return to Home Page</a>
+<a href="../home.html" class="button">Return to Home Page</a>
 <p>My full print out of Nissalys the Dragon Girl which I did as part of the Monster Girl Event.</p>
 <p>At time of posting this, she has 19.5K messages and is my 7th most popular bot.</p>
 <br>
@@ -143,8 +152,19 @@ Female: Voice 9
 <br>
 <p>Token</p>
 <p>2473 / 2500</p>
-<a href="../index.html" class="button">Return to Home Page</a>
+<a href="../home.html" class="button">Return to Home Page</a>
 </div>
     </div>
+    <script>
+        document.getElementById('popup').addEventListener('animationend', function() {
+            this.style.display = 'none';
+            var animationBackground = document.querySelector('.animation-background');
+            animationBackground.classList.add('fadeOut');
+            animationBackground.addEventListener('animationend', function() {
+                this.style.display = 'none';
+                document.querySelector('.background').style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>

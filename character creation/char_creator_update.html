@@ -2,13 +2,21 @@
 <html>
 <head>
     <title>Library of Snailexandria</title>
-    <title>Library of Snailexandria</title>
-        <link rel="stylesheet" type="text/css" href="../style.css?v=10">
+        <link rel="stylesheet" type="text/css" href="character_creator.css">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 </head>
 <body>
+    <div class="animation-background">
+        <div id="popup">
+            <div>
+                <h3>You're now reading: </h3>
+                <h1>X's Guide</h1>
+                <p>Enjoy the read!</p>
+            </div>
+        </div>
+    </div>
     <div class="background">
         <div class="page-wide-section">
             <h1>Character Creation</h1>
@@ -59,5 +67,16 @@
         </div>
     </div>
     <script src="../character_generator.JS"></script>
+    <script>
+        document.getElementById('popup').addEventListener('animationend', function() {
+            this.style.display = 'none';
+            var animationBackground = document.querySelector('.animation-background');
+            animationBackground.classList.add('fadeOut');
+            animationBackground.addEventListener('animationend', function() {
+                this.style.display = 'none';
+                document.querySelector('.background').style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>

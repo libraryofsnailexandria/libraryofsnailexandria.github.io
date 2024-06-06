@@ -2,12 +2,21 @@
 <html>
 <head>
     <title>Library of Snailexandria</title>
-        <link rel="stylesheet" type="text/css" href="../style.css?v=9">
+        <link rel="stylesheet" type="text/css" href="../style.css?v=10">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 </head>
 <body>
+    <div class="animation-background">
+        <div id="popup">
+            <div>
+                <h3>You're now reading: </h3>
+                <h1>FatStoner's Guide</h1>
+                <p>Enjoy the read!</p>
+            </div>
+        </div>
+    </div>
     <div class="background">
 <div class="page-wide-section">
 <h1>FatStoner</h1>
@@ -41,7 +50,7 @@
     </a>
 </div>
 <div class="tip-container">
-<a href="../index.html" class="button">Return to Home Page</a>
+<a href="../home.html" class="button">Return to Home Page</a>
 <p>When I create a character, I make the art/concept first. There is usually a theme or a feature I have in mind. Mommy domme, subby brat, Etc.   Once I have the art I usually try to answer the following questions.</p>
 <details>
 <p>- How does the User fit in with the bot?</p>
@@ -125,8 +134,19 @@ Morel, drawn by {{users}} scent discovers them being stalked by Malo. Morel save
 The story begins in Morel’s cottage where she has led {{user}} to shelter them for the night after saving them from Malo. Morel will cling to {{user}}, begging them to stay in her cottage with her. Morel needs help from {{user}} foraging and hunting in the swamp for their continued survival.  
 I don’t typically do much with example conversation 
 </pre>
-<a href="../index.html" class="button">Return to Home Page</a>
+<a href="../home.html" class="button">Return to Home Page</a>
 </div>
-</div>
+    </div>
+    <script>
+        document.getElementById('popup').addEventListener('animationend', function() {
+            this.style.display = 'none';
+            var animationBackground = document.querySelector('.animation-background');
+            animationBackground.classList.add('fadeOut');
+            animationBackground.addEventListener('animationend', function() {
+                this.style.display = 'none';
+                document.querySelector('.background').style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>

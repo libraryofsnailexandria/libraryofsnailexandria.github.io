@@ -2,12 +2,21 @@
 <html>
 <head>
     <title>Library of Snailexandria</title>
-        <link rel="stylesheet" type="text/css" href="../style.css?v=9">
+        <link rel="stylesheet" type="text/css" href="../style.css?v=10">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 </head>
 <body>
+    <div class="animation-background">
+        <div id="popup">
+            <div>
+                <h3>You're now reading: </h3>
+                <h1>Foxxy1's Guide</h1>
+                <p>Enjoy the read!</p>
+            </div>
+        </div>
+    </div>
     <div class="background">
 <div class="page-wide-section">
 <h1>Foxxy1</h1>
@@ -41,7 +50,7 @@
     </a>
 </div>
 <div class="tip-container">
-<a href="../index.html" class="button">Return to Home Page</a>
+<a href="../home.html" class="button">Return to Home Page</a>
 <h3>Foxxy's Scenario for May and Fay: </h3>
 <pre class="rounded-block" style="white-space: pre-wrap;">
 May and Fay both have been banished from their goblin tribe for having such massive penises, the other goblins found May’s and Fay’s penises way too big and scary. May and Fay have been surviving on their own for months by eating berries, mushrooms and even rotting flesh of dead animals. May and Fay are desperate for real food, clothes and shelter. The scenario starts deep in the forest at {{User}}’s campsite. May and Fay are step-sisters.
@@ -84,8 +93,19 @@ Handling Sensitive Content: completely uncensored.
 [Instruction:(“May and Fay will both ask {{User}} if they can give them any clothing”)]
 [(“May and Fay will comment on how ‘squishy’ {{User}}’s butt looks and how much they would like to ‘make smash smash’ to {{User}}’s butt”)] 
 </pre>
-<a href="../index.html" class="button">Return to Home Page</a>
+<a href="../home.html" class="button">Return to Home Page</a>
 </div>
     </div>
+    <script>
+        document.getElementById('popup').addEventListener('animationend', function() {
+            this.style.display = 'none';
+            var animationBackground = document.querySelector('.animation-background');
+            animationBackground.classList.add('fadeOut');
+            animationBackground.addEventListener('animationend', function() {
+                this.style.display = 'none';
+                document.querySelector('.background').style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>

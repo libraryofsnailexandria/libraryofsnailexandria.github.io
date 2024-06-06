@@ -2,12 +2,21 @@
 <html>
 <head>
     <title>Library of Snailexandria</title>
-        <link rel="stylesheet" type="text/css" href="../style.css?v=9">
+        <link rel="stylesheet" type="text/css" href="../style.css?v=10">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 </head>
 <body>
+    <div class="animation-background">
+        <div id="popup">
+            <div>
+                <h3>You're now reading: </h3>
+                <h1>CommondDon's Guide</h1>
+                <p>Enjoy the read!</p>
+            </div>
+        </div>
+    </div>
     <div class="background">
 <div class="page-wide-section">
 <h1>CommonDon</h1>
@@ -41,7 +50,7 @@
     </a>
 </div>
 <div class="tip-container">
-<a href="../index.html" class="button">Return to Home Page</a>
+<a href="../home.html" class="button">Return to Home Page</a>
 <h1>The Method</h1>
 <h3>The most important part of making my characters: </h3>
 <p>I have to have a spark. I don’t like making characters for no reason, I always have some kind of goal or spark in mind when I write them. For some characters, it’s to test a certain composition style (Allison was an experiment about forcing emotionlessness), or it can be about a certain character concept (the Eternal Horizons pair, or BEAU, for examples). </p>
@@ -78,8 +87,19 @@ I use a handful of lines, each one being a single sentence that the Character wo
 </pre>
 <p>After that comes the fine details. The Description field should be seen as your tagline or slogan, the thing that draws users in, with a short and sweet pitch. Tags are often underrated, as they determine one of the few ways Users find your character after they leave New. All that leaves is the Voice, which is new at the moment, and the best advice I can give is: go with your heart, here.</p>
 <br>
-<a href="../index.html" class="button">Return to Home Page</a>
+<a href="../home.html" class="button">Return to Home Page</a>
 </div>
     </div>
+    <script>
+        document.getElementById('popup').addEventListener('animationend', function() {
+            this.style.display = 'none';
+            var animationBackground = document.querySelector('.animation-background');
+            animationBackground.classList.add('fadeOut');
+            animationBackground.addEventListener('animationend', function() {
+                this.style.display = 'none';
+                document.querySelector('.background').style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>
